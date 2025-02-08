@@ -16,6 +16,16 @@ spline-viewer {
     left: 0;
 }
 
+/* Button Container (For Inline Layout) */
+.button-container {
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    z-index: 10; /* Ensure it's above the Spline viewer */
+    display: grid;
+    gap: 50px; /* Space between buttons */
+}
+
 /* Button styles */
 .button-33 {
   background-color: #c2fbd7;
@@ -28,23 +38,16 @@ spline-viewer {
               rgba(44, 187, 99, .15) 0 16px 32px;
   color: green;
   cursor: pointer;
-  display: inline-block;
   font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
   padding: 7px 20px;
   text-align: center;
   text-decoration: none;
   transition: all 250ms;
   border: 0;
-  font-size: 16px;
+  font-size: 30px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-
-  /* Fix button at the top-left */
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 10; /* Ensure it stays above the Spline viewer */
 }
 
 /* Button hover effect */
