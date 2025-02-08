@@ -1,40 +1,79 @@
-int sensor_pin = A0; //signal from the capacitive soil moisture sensor
-int output_value ;  // value of soil moisture
-int pump = 8;      // digital pin where the relay is plugged in
-int threshold = 5;  //threshold value to trigger pump
+#include "DHT.h"
+
+#define DHTPIN 2      // Pin where the sensor is connected
+#define DHTTYPE DHT11 // Sensor type
+
+DHT dht(DHTPIN, DHTTYPE);
+
+// Defined pins for the modules
+int lightPin = A1;
+int waterLevelPin = A2;
+int moisturePin = A0; // Soil moisture sensor
+int pump = 8;        // Digital pin where the relay is plugged in
+int threshold = 5;   // Threshold value to trigger pump
 
 void setup() {
-  Serial.begin(9600);
-  pinMode(sensor_pin, INPUT);  //setup for the soil moisture senor aka INPUt
-  pinMode(pump, OUTPUT);      //setup for the pump aka   OUTPUT
-  Serial.println("Reading From the Sensor ...");
-  delay(1000);  //1 second delay
-  }
+  Serial.begin(9600); // Initialize the serial monitor
+  dht.begin();        // Initialize the DHT sensor
+  pinMode(lightPin, INPUT);
+  pinMode(waterLevelPin, INPUT);
+  pinMode(moisturePin, INPUT);
+  pinMode(pump, OUTPUT);      // Setup for the pump as OUTPUT
+  Serial.println("Reading From the Sensors...");
+  delay(1000);  // 1 second delay
+}
 
 void loop() {
+  // Read humidity and temperature
+  float humidity = dht.readHumidity();           
+  float temperatureC = dht.readTemperature();   // Temperature in Celsius
+  float temperatureF = dht.readTemperature(true); // Temperature in Fahrenheit
+  float temperatureK = temperatureC + 273.15;   // Temperature in Kelvin
 
-  output_value = analogRead(sensor_pin);     //gets the value from the soil moisture sensor
-  output_value = map(output_value,550,0,0,100); // this sets the percentage value
-  Serial.print("Moisture : ");
-  Serial.print(output_value);    //print the percent of soil moisture - max is 33% if dipped in a cup of water
-  Serial.println("%");
-  delay(1000); //wait 1 second
-  if (output_value < threshold)  //if the soil is try then pump out water for 1 second
-    {
+  // Read light, soil moisture, and water level sensors
+  int rawLightLevel = analogRead(lightPin);
+  int lightLevel = map(rawLightLevel, 0, 1023, 100, 0); // Convert to percentage (0 = dark, 100 = bright)
+  int waterLevel = analogRead(waterLevelPin);
+  int moistureLevel = analogRead(moisturePin);
+  moistureLevel = map(moistureLevel, 550, 0, 0, 100); // Convert to percentage
+
+  // Check if DHT sensor reading is valid
+  if (isnan(humidity) || isnan(temperatureC)) {
+    Serial.println("Error reading DHT sensor data!");
+  } else {
+    // Output temperature and humidity data
+    Serial.print("Temperature: ");
+    Serial.print(temperatureC);
+    Serial.print("°C, ");
+    Serial.print(temperatureF);
+    Serial.print("°F, ");
+    Serial.print(temperatureK);
+    Serial.println("K");
+
+    Serial.print("Humidity: ");
+    Serial.print(humidity);
+    Serial.print("%, ");
+  }
+
+  // Output light, soil moisture, and water level data
+  Serial.print("Light: ");
+  Serial.print(lightLevel);
+  Serial.print("%, Moisture: ");
+  Serial.print(moistureLevel);
+  Serial.print("%, Water Level: ");
+  Serial.println(waterLevel);
+
+  // Check soil moisture level and control the pump
+  if (moistureLevel < threshold) { // If soil is dry, activate pump
     digitalWrite(pump, HIGH);
-    Serial.println("pump on for 1 second");
-    delay(1000);  //run pump for 1 second;
+    Serial.println("Pump on for 1 second");
+    delay(1000);  // Run pump for 1 second
     digitalWrite(pump, LOW);
-    Serial.println("pump off");
-    //delay(300000); //wait 5 minutes before checking again
-    delay(1000);//wait 1 second. This is for testing, uncomment the line above when ready to implement
-    }
-    else
-    {
+    Serial.println("Pump off");
+  } else {
     digitalWrite(pump, LOW);
-    Serial.println("do not turn on pump");
-    //delay(300000); //wait 5 minutes
-    delay(1000);// wait 1 second. This is for testing, uncomment the line above when implementing
-    }
+    Serial.println("Soil moisture sufficient, do not turn on pump");
+  }
+
+  delay(5000); // Delay between readings
 }
-    
