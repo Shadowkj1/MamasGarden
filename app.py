@@ -7,4 +7,5 @@ def home():
     return "Hello, Flask!"
 
 if __name__ == '__main__':
+    nyan = 1
     app.run(debug=True)
