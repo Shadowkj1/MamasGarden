@@ -1,0 +1,25 @@
+import serial
+import time
+from picamera2 import Picamera2, Preview
+
+# Initialize serial communication with Arduino
+arduino = serial.Serial('/dev/ttyUSB0', 9600)  # Adjust the port if necessary
+time.sleep(2)
+
+# Moisture threshold for taking a video
+moisture_threshold = 500  # Adjust based on your sensor's readings
+
+picam2 = Picamera2() 
+camera_config = picam2.create_preview_configuration() 
+picam2.configure(camera_config) 
+picam2.start_preview(Preview.QTGL) 
+picam2.start() 
+time.sleep(2) 
+picam2.capture_file("test.jpg")
+
+
+while True:
+    if arduino.in_waiting > 0:  # Check if data is available from Arduino
+        data = arduino.readline().decode().strip()
+        print(data)  # Print the sensor data from Arduino
+
