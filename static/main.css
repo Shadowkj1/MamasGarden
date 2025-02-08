@@ -1,0 +1,59 @@
+/* Ensure the body takes up full screen */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Make the Spline viewer fill the entire viewport */
+spline-viewer {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Button styles */
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, 
+              rgba(44, 187, 99, .15) 0 1px 2px, 
+              rgba(44, 187, 99, .15) 0 2px 4px, 
+              rgba(44, 187, 99, .15) 0 4px 8px, 
+              rgba(44, 187, 99, .15) 0 8px 16px, 
+              rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  /* Fix button at the top-left */
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10; /* Ensure it stays above the Spline viewer */
+}
+
+/* Button hover effect */
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset, 
+              rgba(44,187,99,.25) 0 1px 2px, 
+              rgba(44,187,99,.25) 0 2px 4px, 
+              rgba(44,187,99,.25) 0 4px 8px, 
+              rgba(44,187,99,.25) 0 8px 16px, 
+              rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
