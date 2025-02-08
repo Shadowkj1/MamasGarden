@@ -1,49 +1,44 @@
-// Fetch plants and display them in the dashboard
-async function loadPlants() {
-    let response = await fetch("http://localhost:5000/api/plants");
-    let plants = await response.json();
+document.addEventListener("DOMContentLoaded", () => {
+    const plantScroll = document.getElementById("plantScroll");
 
-    let container = document.getElementById("plantList");
-    container.innerHTML = "";
+    // 🏗️ Duplicate plant cards to ensure a seamless loop
+    function duplicateCards() {
+        const clone = plantScroll.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        plantScroll.parentElement.appendChild(clone);
+    }
 
-    plants.forEach(plant => {
-        let div = document.createElement("div");
-        div.className = "plant-card";
-        div.innerHTML = `<h3>${plant.name}</h3><p>Health: ${plant.health}</p>`;
-        div.onclick = () => window.location.href = `profile.html?id=${plant.id}`;
-        container.appendChild(div);
+    duplicateCards();
+
+    // 🌿 Adjust scrolling animation speed dynamically
+    function adjustAnimationSpeed() {
+        const totalWidth = plantScroll.scrollWidth / 2;
+        const speed = totalWidth / 100; // Adjust speed based on content width
+        plantScroll.style.animationDuration = `${speed}s`;
+    }
+
+    adjustAnimationSpeed();
+
+    // 🛑 Pause scrolling when hovered
+    plantScroll.addEventListener("mouseenter", () => {
+        plantScroll.style.animationPlayState = "paused";
     });
-}
 
-// Load plant data for profile
-async function loadPlantProfile() {
-    let params = new URLSearchParams(window.location.search);
-    let plantId = params.get("id");
-
-    let response = await fetch(`http://localhost:5000/api/plant/${plantId}`);
-    let plant = await response.json();
-
-    document.getElementById("plantName").textContent = plant.name;
-    document.getElementById("aiAdvice").textContent = `AI Recommendations: ${plant.recommendation}`;
-
-    // Chart.js - Create a line chart
-    let ctx = document.getElementById("plantChart").getContext("2d");
-    new Chart(ctx, {
-        type: "line",
-        data: {
-            labels: ["12 AM", "6 AM", "12 PM", "6 PM"],
-            datasets: [{
-                label: "Moisture Level (%)",
-                data: plant.moistureData,
-                borderColor: "blue",
-                borderWidth: 2
-            }]
-        }
+    // ▶ Resume scrolling when mouse leaves
+    plantScroll.addEventListener("mouseleave", () => {
+        plantScroll.style.animationPlayState = "running";
     });
-}
 
-if (window.location.pathname.includes("profile.html")) {
-    loadPlantProfile();
-} else {
-    loadPlants();
-}
+    // 🌱 Smooth Expansion on Hover
+    const cards = document.querySelectorAll(".plant-card");
+
+    cards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            card.classList.add("expanded");
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.classList.remove("expanded");
+        });
+    });
+});

@@ -1,4 +1,45 @@
-/* 🌿 General Styling */
+/* 🌿 Import "The Scientist" Font */
+@font-face {
+    font-family: 'The Scientist';
+    src: url('/static/fonts/TheScientist.ttf') format('truetype');
+}
+
+/* Apply the Font */
+h1 {
+    font-family: 'The Scientist', sans-serif;
+    font-size: 8rem;
+    color: black;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 3.5s ease-in-out forwards;
+}
+
+/* 🌱 Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 🖋 Apply Chalkduster Font */
+@font-face {
+    font-family: 'Chalkduster';
+    src: local('Chalkduster'), local('Comic Sans MS');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2 {
+    font-family: 'Chalkduster', fantasy;
+    font-size: 2.5rem;
+    color: #4A3F35; /* Dark Chalkboard-Like Color */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -20,31 +61,105 @@ nav a {
     margin: 0 15px;
 }
 
-/* 🌱 Plant Overview */
-.dashboard {
-    margin: 20px;
-}
-
-.plant-container {
+/* 🌱 Infinite Scrolling Container */
+.plant-scroll-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
     display: flex;
     justify-content: center;
-    gap: 10px;
 }
 
+/* 🌿 Wrapper for smoother scrolling */
+.plant-scroll-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 🎥 Looping Strip */
+.plant-scroll {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scrollLoop 10s linear infinite;
+}
+
+/* 🎥 Infinite Scrolling Animation */
+@keyframes scrollLoop {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* 🌿 Adjust Scroll Speed */
+.plant-scroll {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scrollLoop 20s linear infinite; /* Increase duration to slow down */
+}
+
+/* ✅ Pause scrolling on hover */
+.plant-scroll:hover {
+    animation-play-state: paused;
+}
+
+/* 🎨 Plant Cards */
 .plant-card {
     background: white;
+    border-radius: 12px;
     padding: 10px;
-    border-radius: 8px;
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
-/* 🔥 Status Colors */
-.status.good { color: green; font-weight: bold; }
-.status.warning { color: orange; font-weight: bold; }
+/* 🌿 Circular Plant Image */
+.plant-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
 
-/* 📊 Chart */
-canvas {
-    max-width: 80%;
-    margin: 20px auto;
+/* 🌊 Animate Image on Hover */
+.plant-card:hover img {
+    transform: scale(1.2);
+}
+
+/* 🌱 Expand Tile on Hover */
+.plant-card:hover {
+    width: 250px;
+    height: auto;
+    min-height: 220px;
+}
+
+/* 🌞 Extra Info (Hidden by Default) */
+.extra-info {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    white-space: normal;
+}
+
+/* ✅ Fix Text Cutoff Issue */
+.plant-card:hover .extra-info {
+    opacity: 1;
+    display: block;
 }
