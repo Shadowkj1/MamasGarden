@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav {
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
+
+.dashboard {
+    margin: 20px;
+}
+
+.plant-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.plant-card {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container {
+    margin: 20px;
+}
+
+canvas {
+    max-width: 80%;
+}
