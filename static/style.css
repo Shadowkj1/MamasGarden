@@ -1,3 +1,4 @@
+/* 🌿 General Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
@@ -6,12 +7,20 @@ body {
     text-align: center;
 }
 
+/* 📌 Navigation Bar */
 nav {
     background-color: green;
     color: white;
     padding: 10px;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* 🌱 Plant Overview */
 .dashboard {
     margin: 20px;
 }
@@ -30,10 +39,12 @@ nav {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-container {
-    margin: 20px;
-}
+/* 🔥 Status Colors */
+.status.good { color: green; font-weight: bold; }
+.status.warning { color: orange; font-weight: bold; }
 
+/* 📊 Chart */
 canvas {
     max-width: 80%;
+    margin: 20px auto;
 }

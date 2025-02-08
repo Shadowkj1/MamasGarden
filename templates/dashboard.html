@@ -4,19 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mama's Garden Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <!-- 🌿 Navigation Bar -->
     <nav>
         <h1>Mama's Garden</h1>
-        <a href="index.html">Dashboard</a>
+        <a href="dashboard.html">Dashboard</a>
     </nav>
 
+    <!-- 📊 Main Dashboard -->
     <div class="dashboard">
         <h2>Your Plants</h2>
+
+        <!-- 🌱 Plant Overview Section -->
         <div id="plantList" class="plant-container">
-            <!-- Plant profiles will be added dynamically -->
+            <div class="plant-card">
+                <h3>Aloe Vera</h3>
+                <p>Health: <span class="status good">Good</span></p>
+            </div>
+            <div class="plant-card">
+                <h3>Snake Plant</h3>
+                <p>Health: <span class="status warning">Needs Water</span></p>
+            </div>
+            <div class="plant-card">
+                <h3>Basil</h3>
+                <p>Health: <span class="status good">Thriving</span></p>
+            </div>
         </div>
+
+        <!-- 📈 Metrics Dashboard -->
+        <h2>Plant Health Metrics</h2>
+        <canvas id="plantChart"></canvas>
+
+        <!-- 🤖 AI Recommendations -->
+        <h2>AI Recommendations</h2>
+        <p id="aiAdvice">Loading...</p>
     </div>
 
     <script src="script.js"></script>
