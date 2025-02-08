@@ -11,5 +11,4 @@ def dashboard():
     return render_template('dashboard.html')
 
 if __name__ == '__main__':
-    nyan = 1
     app.run(debug=True)

@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
 <body>
-
-    <!-- Fixed Button at Top-Left -->
-    <button class="button-33" role="button">Dashboard</button>
-    <button class="button-33" role="button">About</button>
+    <div class="button-container">
+        <a href="{{ url_for('dashboard') }}"><button class="button-33" role="button">Dashboard</button></a>
+        <button class="button-33" role="button">About</button>
+    </div>
 
     <!-- Embed Spline 3D Scene as Background -->
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.63/build/spline-viewer.js"></script>
