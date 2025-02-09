@@ -1,0 +1,12 @@
+[
+    {
+        "timestamp": "2025/02/08 - 23:12:50",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 20.3,
+        "temperatureF": 68.54,
+        "humidity": 22.0,
+        "light": 79,
+        "moisture": 59,
+        "waterLevel": 5
+    }
+]
