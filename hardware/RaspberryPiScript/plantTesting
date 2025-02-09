@@ -67,7 +67,7 @@ while True:
 
             if len(values) == 7:
                 data_entry = {
-                    "timestamp": time.time(),
+                    "timestamp": datetime.now().strftime('%Y%m%d%H%M%S'),
                     "waterStatus": str(values[0]),
                     "temperatureC": float(values[1]),
                     "temperatureF": float(values[2]),
