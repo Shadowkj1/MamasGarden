@@ -133,11 +133,11 @@ def get_recommendation():
     # Format plant data for AI prompt
     plant_prompt = (
         f"Given this latest Bonsai plant data:\n"
-        f"- Temperature: {latest_data['temperatureF']}°F\n"
-        f"- Humidity: {latest_data['humidity']}%\n"
-        f"- Light Level: {latest_data['light']} lux\n"
-        f"- Moisture Level: {latest_data['moisture']}%\n"
-        f"- Water Level: {latest_data['waterLevel']}\n\n"
+        f"- **Temperature:** {latest_data['temperatureF']}°F\n"
+        f"- **Humidity:** {latest_data['humidity']}%\n"
+        f"- **Light Level:** {latest_data['light']} lux\n"
+        f"- **Moisture Level:** {latest_data['moisture']}%\n"
+        f"- **Water Level:** {latest_data['waterLevel']}cm\n\n"
         f"What should I do to maintain my Bonsai's health?"
     )
 
@@ -149,13 +149,26 @@ def get_recommendation():
             model="gemini-2.0-flash",
             contents=plant_prompt
         )
-        recommendation = response.text.strip()
+        raw_recommendation = response.text.strip()
+
+        # Format the response
+        formatted_recommendation = ""
+        lines = raw_recommendation.split("\n")  # Split by new lines
+        for line in lines:
+            while "**" in line:  # Process bold markers
+                start_index = line.index("**")
+                end_index = line.index("**", start_index + 2)
+                bold_text = "<strong>" + line[start_index + 2:end_index] + "</strong>"
+                line = line[:start_index] + bold_text + line[end_index + 2:]
+            formatted_recommendation += line + "<br>"  # Add HTML line breaks
+
     except Exception as e:
         print("❌ Gemini AI Error:", e)
-        recommendation = "Unable to generate a recommendation at this time."
+        formatted_recommendation = "Unable to generate a recommendation at this time."
 
-    print("💡 AI Recommendation:", recommendation)  # Debugging print
-    return jsonify({"recommendation": recommendation})
+    print("💡 AI Recommendation (Formatted):", formatted_recommendation)  # Debugging print
+    return jsonify({"recommendation": formatted_recommendation})
+
 
 # ======================== Run Flask App ======================== #
 if __name__ == '__main__':

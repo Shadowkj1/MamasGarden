@@ -30,9 +30,9 @@ fetch("/api/plant-logs")
         const datasetMap = {
             "temperatureF": { label: "Temperature (°F)", data: [], color: "#FF5733" },
             "humidity": { label: "Humidity (%)", data: [], color: "#3498DB" },
-            "light": { label: "Light Level", data: [], color: "#F1C40F" },
-            "moisture": { label: "Moisture Level", data: [], color: "#27AE60" },
-            "waterLevel": { label: "Water Level", data: [], color: "#1ABC9C" }
+            "light": { label: "Light Level (Lux)", data: [], color: "#F1C40F" },
+            "moisture": { label: "Moisture Level (%)", data: [], color: "#27AE60" },
+            "waterLevel": { label: "Water Level (cm)", data: [], color: "#1ABC9C" }
         };
 
         // Fill datasets dynamically, ensuring valid numeric values
@@ -141,3 +141,18 @@ fetch("/api/plant-logs")
         }
     })
     .catch(error => console.error("❌ Error fetching plant logs:", error));
+    document.addEventListener("DOMContentLoaded", function () {
+        fetchRecommendation();
+    
+        function fetchRecommendation() {
+            fetch('/get_recommendation')
+                .then(response => response.json())
+                .then(data => {
+                    console.log("🌱 AI Recommendation:", data);
+                    document.getElementById("ai-recommendation").innerHTML = 
+                        `<strong>AI Suggestion:</strong> ${data.recommendation}`;
+                })
+                .catch(error => console.error("❌ Error fetching recommendation:", error));
+        }
+    });
+    

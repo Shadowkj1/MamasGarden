@@ -24,7 +24,7 @@ spline-viewer {
 /* Mama's Garden Title */
 .website-title {
     position: fixed;
-    top: 30%;
+    top: 25%;
     left: 5%;
     transform: translateY(-50%);
     font-size: 9rem;
