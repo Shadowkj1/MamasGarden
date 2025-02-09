@@ -7,11 +7,6 @@ body, html {
     overflow: hidden;
 }
 
-@font-face {
-    font-family: 'The Scientist';
-    src: url('/static/fonts/TheScientist.ttf') format('truetype');
-}
-
 /* Make the Spline viewer fill the entire viewport */
 spline-viewer {
     width: 100vw;
@@ -20,18 +15,24 @@ spline-viewer {
     top: 0;
     left: 0;
 }
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+}
 
 /* Mama's Garden Title */
 .website-title {
+    font-family: 'Dancing Script', cursive;
     position: fixed;
     top: 30%;
     left: 5%;
     transform: translateY(-50%);
-    font-size: 9rem;
+    font-size: 10rem;
     font-weight: bold;
     color: black;
     text-shadow: 0 0 10px rgba(169, 237, 203, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
-    font-family: 'The Scientist', sans-serif;
     z-index: 20;
     white-space: nowrap;
 }

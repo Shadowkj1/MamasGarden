@@ -1,6 +1,6 @@
 body, html {
     overflow: hidden;
-}
+} 
 
 /* Import "The Scientist" Font */
 @font-face {
@@ -10,13 +10,13 @@ body, html {
 
 /* Apply the Font */
 h1 {
-    font-family: 'The Scientist', sans-serif;
-    font-size: 6rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 10rem;
     color: black;
     text-align: center;
     opacity: 0;
     animation: fadeIn 3.5s ease-in-out forwards;
-    height: 25vh;
+    height: 15vh;
 }
 
 /* Fade-in Animation */
@@ -74,7 +74,7 @@ nav a {
 
 /* Plant Cards */
 .plant-card {
-    background: white;
+    background: rgb(244, 242, 242);
     border-radius: 12px;
     padding: 10px;
     width: 180px; /* Square image layout */
@@ -136,7 +136,7 @@ nav a {
 }
 
 body {
-    background: linear-gradient(to bottom, green 10%, grey 60%);
+    background: linear-gradient(to bottom, #15d89f 10%, #eaf8fb 60%);
     height: 105vh;
     margin: 0;
     padding: 0;
