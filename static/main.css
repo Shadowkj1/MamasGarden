@@ -26,7 +26,7 @@ h1 {
 .website-title {
     font-family: 'Dancing Script', cursive;
     position: fixed;
-    top: 30%;
+    top: 25%;
     left: 5%;
     transform: translateY(-50%);
     font-size: 10rem;

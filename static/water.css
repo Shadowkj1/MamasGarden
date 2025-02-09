@@ -132,3 +132,27 @@ body {
     font-size: 2rem;
     color: black;
 }
+
+/* Back to Dashboard Button */
+.back-button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    z-index: 1000;
+}
+
+.back-button img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Hover Effect */
+.back-button:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+}

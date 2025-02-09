@@ -1,12 +1,12 @@
 let chartInstance;  // Store the chart instance globally
 
-fetch("/api/plant-logs")
+fetch("/api/plant-logs")  // Now fetching from MongoDB
     .then(response => response.json())
     .then(data => {
-        console.log("✅ Fetched JSON Data:", data);
+        console.log("✅ Fetched Plant Logs from MongoDB:", data);
 
         if (!Array.isArray(data) || data.length === 0) {
-            console.error("❌ Invalid or empty JSON format");
+            console.error("❌ No valid data received from MongoDB");
             document.getElementById("chartTitle").innerText = "No Data Available";
             return;
         }
@@ -30,9 +30,9 @@ fetch("/api/plant-logs")
         const datasetMap = {
             "temperatureF": { label: "Temperature (°F)", data: [], color: "#FF5733" },
             "humidity": { label: "Humidity (%)", data: [], color: "#3498DB" },
-            "light": { label: "Light Level", data: [], color: "#F1C40F" },
-            "moisture": { label: "Moisture Level", data: [], color: "#27AE60" },
-            "waterLevel": { label: "Water Level", data: [], color: "#1ABC9C" }
+            "light": { label: "Light Level (Lux)", data: [], color: "#F1C40F" },
+            "moisture": { label: "Moisture Level (%)", data: [], color: "#27AE60" },
+            "waterLevel": { label: "Water Level (cm)", data: [], color: "#1ABC9C" }
         };
 
         // Fill datasets dynamically, ensuring valid numeric values
@@ -140,4 +140,20 @@ fetch("/api/plant-logs")
             });
         }
     })
-    .catch(error => console.error("❌ Error fetching plant logs:", error));
+    .catch(error => console.error("❌ Error fetching plant logs from MongoDB:", error));
+
+    document.addEventListener("DOMContentLoaded", function () {
+        fetchRecommendation();
+    
+        function fetchRecommendation() {
+            fetch('/get_recommendation')
+                .then(response => response.json())
+                .then(data => {
+                    console.log("🌱 AI Recommendation:", data);
+                    document.getElementById("ai-recommendation").innerHTML = 
+                        `<strong>AI Suggestion:</strong> ${data.recommendation}`;
+                })
+                .catch(error => console.error("❌ Error fetching recommendation:", error));
+        }
+    });
+    

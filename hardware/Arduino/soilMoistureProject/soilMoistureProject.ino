@@ -10,7 +10,7 @@ int lightPin = A1;
 int waterLevelPin = A2;
 int moisturePin = A0; // Soil moisture sensor
 int pump = 8;        // Digital pin where the relay is plugged in
-int threshold = 20;   // Threshold value to trigger pump
+int threshold = 10;   // Threshold value to trigger pump
 
 void setup() {
   Serial.begin(9600); // Initialize the serial monitor
@@ -24,7 +24,7 @@ void setup() {
 }
 
 unsigned long previousMillis = 0; // Store the last time data was grabbed
-const long interval = 20000; // Interval to grab data (1 minute)
+const long interval = 600000; // Interval to grab data (10 minutes)
 
 void loop() {
   // Read humidity and temperature

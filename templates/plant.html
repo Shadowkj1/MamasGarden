@@ -7,6 +7,7 @@
     <title>Plant Data Visualization</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='water.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Mamas.png') }}">
 </head>
 <body>
     <section>
@@ -16,14 +17,20 @@
         </div>
     </section>
 
+    <!-- Back to Dashboard Button -->
+    <a href="{{ url_for('dashboard') }}" class="back-button">
+        <img src="{{ url_for('static', filename='images/back-icon.png') }}" alt="Back to Dashboard">
+    </a>
+
+
     <!-- Dropdown to Select Graph Type -->
     <label for="graphType">Select Metric:</label>
     <select id="graphType">
         <option value="temperatureF">Temperature (°F)</option>
         <option value="humidity">Humidity (%)</option>
-        <option value="light">Light Level</option>
-        <option value="moisture">Moisture Level</option>
-        <option value="waterLevel">Water Level</option>
+        <option value="light">Light Level (Lux)</option>
+        <option value="moisture">Moisture Level (%)</option>
+        <option value="waterLevel">Water Level (cm)</option>
     </select>
 
     <!-- Graph Section -->
@@ -42,3 +49,4 @@
 
 </body>
 </html>
+
