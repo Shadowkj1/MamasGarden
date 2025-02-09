@@ -27,9 +27,9 @@ h1 {
     font-family: 'Dancing Script', cursive;
     position: fixed;
     top: 25%;
-    left: 5%;
+    left: 2%;
     transform: translateY(-50%);
-    font-size: 10rem;
+    font-size: 9rem;
     font-weight: bold;
     color: black;
     text-shadow: 0 0 10px rgba(169, 237, 203, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);

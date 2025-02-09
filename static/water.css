@@ -136,23 +136,27 @@ body {
 /* Back to Dashboard Button */
 .back-button {
     position: fixed;
-    top: 15px;
-    left: 15px;
-    background: white;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
-    z-index: 1000;
+    top: 20px;
+    left: 20px;
+    padding: 15px;
+    border-radius: 100%;
+    transition: transform 0.4s ease-in-out, background-color 2s ease-in-out;
+    z-index: 1000; /* Ensure it stays on top */
+    
+    /* Initial White Background with Gradient */
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    
+    animation: fadeGradient 2.5s ease-in-out forwards;
 }
 
 .back-button img {
     width: 40px;
     height: 40px;
+    transition: opacity 1s ease-in-out;
 }
 
 /* Hover Effect */
 .back-button:hover {
     transform: scale(1.1);
-    background-color: #f0f0f0;
+    background: rgba(255, 255, 255, 0.2);
 }
