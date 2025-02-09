@@ -99,7 +99,7 @@ def get_plant_logs():
     """API to fetch latest plant logs directly from MongoDB"""
     try:
         # Fetch the latest 10 plant sensor records sorted by timestamp
-        logs = list(plants_collection.find({}, {"_id": 0}).sort("timestamp", -1).limit(10))
+        logs = list(plants_collection.find({}, {"_id": 0}).sort("timestamp", -1))
 
         if not logs:
             return jsonify({"error": "No plant log data found in MongoDB"}), 404
@@ -164,7 +164,6 @@ def get_recommendation():
         print("❌ Gemini AI Error:", e)
         formatted_recommendation = "Unable to generate a recommendation at this time."
 
-    print("💡 AI Recommendation (Formatted):", formatted_recommendation)  # Debugging print
     return jsonify({"recommendation": formatted_recommendation})
 
 
