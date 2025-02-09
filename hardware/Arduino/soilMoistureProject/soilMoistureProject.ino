@@ -48,13 +48,18 @@ void loop() {
 
     // Check if DHT sensor reading is valid
     if (isnan(humidity) || isnan(temperatureC)) {
-      Serial.println("Error reading DHT sensor data!");
+      Serial.println("Error reading DHT sensor data! Fix to display data correctly");
     } else {
       printTemperatureANDHumidity(temperatureC, temperatureF, humidity);
+      // Output light, soil moisture, and water level data
+      printLightANDMoisture(lightLevel, waterLevel, moistureLevel);
+      //Original printing format
+      //Temperature: 25.00°C, 77.00°F, Humidity: 50.00%, Light: 50%, Moisture: 50%, Water Level: 50
+
+    
     }
 
-    // Output light, soil moisture, and water level data
-    printLightANDMoisture(lightLevel, waterLevel, moistureLevel);
+
   }
 
   // Check soil moisture level and control the pump
@@ -78,18 +83,30 @@ void loop() {
 
 }
 
+//only prints the raw value to terminal, nothing else
 void printTemperatureANDHumidity(float tempC, float tempF, float humidity) {
     // Output temperature and humidity data
-    Serial.print("Temperature: "); 
-    Serial.print(tempC); Serial.print("°C, ");
-    Serial.print(tempF); Serial.print("°F, ");
+    // Serial.print("Temperature: "); 
+    Serial.print(tempC); 
+    // Serial.print("°C, ");
+    Serial.print(",");
+    Serial.print(tempF); 
+    // Serial.print("°F, ");
+    Serial.print(",");
     // Serial.print(temperatureK); Serial.println("K");
-    Serial.print("Humidity: "); Serial.print(humidity); Serial.print("%, ");
+    // Serial.print("Humidity: "); 
+    Serial.print(humidity);
+    Serial.print(","); 
+    // Serial.print("%,");
 }
-
+//only prints the raw value to terminal, nothing else
 void printLightANDMoisture(int lightLevel, int waterLevel, int moistLevel){
     // Output light, soil moisture, and water level data
-    Serial.print("Light: "); Serial.print(lightLevel);
-    Serial.print("%, Moisture: "); Serial.print(moistLevel);
-    Serial.print("%, Water Level: "); Serial.println(waterLevel); 
+    // Serial.print("Light: "); 
+    Serial.print(lightLevel);
+    Serial.print(",");
+    Serial.print(moistLevel);
+    // Serial.print("%, Water Level: "); 
+    Serial.print(",");
+    Serial.println(waterLevel); 
 }
