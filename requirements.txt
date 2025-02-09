@@ -2,3 +2,4 @@ Flask
 pymongo[srv]
 Flask-PyMongo
 marshmallow
+google-genai

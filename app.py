@@ -1,5 +1,6 @@
 from flask import Flask, render_template, send_from_directory, jsonify
 from flask_pymongo import PyMongo
+from google import genai
 import config
 
 app = Flask(__name__)
