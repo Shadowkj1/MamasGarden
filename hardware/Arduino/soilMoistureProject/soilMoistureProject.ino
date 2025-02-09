@@ -24,7 +24,7 @@ void setup() {
 }
 
 unsigned long previousMillis = 0; // Store the last time data was grabbed
-const long interval = 60000; // Interval to grab data (1 minute)
+const long interval = 20000; // Interval to grab data (1 minute)
 
 void loop() {
   // Read humidity and temperature
