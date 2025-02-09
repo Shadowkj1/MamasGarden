@@ -1,14 +1,24 @@
 from flask import Flask, render_template, send_from_directory, jsonify
-from flask_pymongo import PyMongo
-from google import genai
-import config
+from pymongo import MongoClient
+import os
+from config import MONGO_URI as mongo_uri
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = config.MONGO_URI
-mongo = PyMongo(app)
+
+# Load MongoDB URI
+print("🔗 Connecting to MongoDB at:", mongo_uri)
+
+# Test connection using MongoClient (instead of Flask-PyMongo)
+try:
+    client = MongoClient(mongo_uri)
+    db = client["PlantDoctorDB"]
+    db.command("ping")  # Check if the database is accessible
+    print("✅ MongoDB Connected Successfully!")
+except Exception as e:
+    print("❌ MongoDB Connection Failed:", e)
+    exit(1)
 
 # Collections
-db = mongo.db
 plants_collection = db.plants
 
 @app.route('/static/fonts/<path:filename>')
@@ -33,4 +43,3 @@ def get_plants():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
