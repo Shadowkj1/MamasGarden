@@ -13,23 +13,17 @@
     <nav>
         <h1>Mama's Garden</h1>
     </nav>
-    <div class="profile-container">
-        <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Profile Picture" class="profile-pic">
-        <span class="profile-name">Sree D</span>
-    </div>
 
     <!-- Main Dashboard -->
     <div class="dashboard">
         <h2>Your Plants</h2>
 
-        
         <div class="plant-scroll-container">
             <div class="plant-scroll">
                 {% for plant in plants %}
                 <div class="plant-card">
                     <img src="{{ url_for('static', filename='images/aloevera.webp') }}" alt="Aloe Vera">
                     <h3>Aloe Vera</h3>
-                    <p class="health-status good">Health: Good</p>
                     <div class="extra-info">
                         <p>Humidity: 90%</p>
                         <p>Water Level: 90%</p>
@@ -42,7 +36,6 @@
                 <div class="plant-card">
                     <img src="{{ url_for('static', filename='images/snakeplant.jpeg') }}" alt="Snake Plant">
                     <h3>Snake Plant</h3>
-                    <p class="health-status warning">Health: Needs Water</p>
                     <div class="extra-info">
                         <p>Humidity: 80%</p>
                         <p>Water Level: 40%</p>
@@ -55,7 +48,6 @@
                 <div class="plant-card">
                     <img src="{{ url_for('static', filename='images/basil.jpg') }}" alt="Basil">
                     <h3>Basil</h3>
-                    <p class="health-status good">Health: Thriving</p>
                     <div class="extra-info">
                         <p>Humidity: 95%</p>
                         <p>Water Level: 85%</p>
@@ -69,14 +61,6 @@
                     <img src="{{ url_for('static', filename='images/k7543.jpg') }}">
                     <h3>Bonsai</h3>
 
-                    {% if plant.health == "Good" %}
-                        <p class="health-status good">Health: Thriving</p>
-                    {% elif plant.health == "Needs Water" %}
-                        <p class="health-status warning">Health: Needs Water</p>
-                    {% else %}
-                        <p class="health-status critical">Health: Critical</p>
-                    {% endif %}
-
                     <div class="extra-info">
                         <p>Humidity: {{ plant.humidity }}%</p>
                         <p>Water Level: {{ plant.water_level }}%</p>
@@ -88,10 +72,8 @@
                 {% endfor %}
             </div>
         </div>
-        
     </div>
-
+    
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
-
