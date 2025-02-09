@@ -1,13 +1,20 @@
 import serial
+import json
+import os
 import time
+from datetime import datetime
 from picamera2 import Picamera2, Preview
 
 # Initialize serial communication with Arduino
-arduino = serial.Serial('/dev/ttyUSB0', 9600)  # Adjust the port if necessary
+SERIAL_PORT = "/dev/ttyUSB0"
+BAUD_RATE = 9600
+LOG_DIR = "../PlantLogs"
+
+arduino = serial.Serial(SERIAL_PORT, BAUD_RATE)  # Adjust the port if necessary
 time.sleep(2)
 
 # Moisture threshold for taking a video
-moisture_threshold = 500  # Adjust based on your sensor's readings
+moisture_threshold = 500  
 
 picam2 = Picamera2() 
 camera_config = picam2.create_preview_configuration() 
@@ -15,11 +22,60 @@ picam2.configure(camera_config)
 picam2.start_preview(Preview.QTGL) 
 picam2.start() 
 time.sleep(2) 
-picam2.capture_file("test.jpg")
+# picam2.capture_file("test.jpg")
+
+
+
+def get_log_filename():
+    """Return the full path of today's log file."""
+    # Ensure the log directory exists
+    if not os.path.exists(LOG_DIR):
+        os.makedirs(LOG_DIR)
+
+    return os.path.join(LOG_DIR, f"{datetime.now().strftime('%Y-%m-%d')}.json")
+
+def log_data(data):
+    """Append sensor data to the daily log file in JSON format."""
+    filename = get_log_filename()
+    
+    # Check if file exists, if not create an empty JSON array
+    if not os.path.exists(filename):
+        with open(filename, "w") as file:
+            json.dump([], file)
+
+    # Read existing data
+    with open(filename, "r") as file:
+        try:
+            logs = json.load(file)
+        except json.JSONDecodeError:
+            logs = []
+
+    # Append new data
+    logs.append(data)
+
+    # Write updated data back to file
+    with open(filename, "w") as file:
+        json.dump(logs, file, indent=4)
 
 
 while True:
     if arduino.in_waiting > 0:  # Check if data is available from Arduino
-        data = arduino.readline().decode().strip()
-        print(data)  # Print the sensor data from Arduino
+        line = arduino.readline().decode().strip()
+        
+        if line and "ERROR" not in line and "Soil moisture sufficient, Pump on standby" not in line:  # Ignore error messages and specific line
+            values = line.split(",")
 
+            if len(values) == 7:
+                data_entry = {
+                    "timestamp": datetime.now().strftime('%Y/%m/%d - %H:%M:%S'),
+                    "waterStatus": str(values[0]),
+                    "temperatureC": float(values[1]),
+                    "temperatureF": float(values[2]),
+                    "humidity": float(values[3]),
+                    "light": int(values[4]),
+                    "moisture": int(values[5]),
+                    "waterLevel": int(values[6]),
+                }
+
+                log_data(data_entry)
+                print("Logged:", data_entry)
