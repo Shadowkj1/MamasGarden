@@ -28,7 +28,6 @@ We have an arduino that is connected to our Raspberry pi that runs the script to
 - Getting the data from arduino to a proper json for parsing
 - Integrating MongoDB with UI was a challenge
 - *fighting sleep*
-- 
 
 ### Accomplishments
 - EVERYTHING!!
@@ -38,3 +37,10 @@ We have an arduino that is connected to our Raspberry pi that runs the script to
 
 ### Whats Next For Mama's Garden
 Incorporating more machines for this project and having a case for this device. Since time and resources were limited, we could not incorporate multiple machines for the project that connect to various plants so that we would improve that. Also, add a case to make the project more neater, more cohesive, and fewer accidents on the hardware side.
+
+## How to run
+1. Connect all of your Arduino and Raspberry Pi components
+2. Open Arduino IDE with the io file
+3. Compile, and run the file
+4. Verify it is sent to the Arduino Successfully
+5. Run plantTesting.py and let it log plant status
