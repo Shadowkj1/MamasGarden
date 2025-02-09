@@ -58,7 +58,6 @@ void loop() {
       //Original printing format
       //Temperature: 25.00°C, 77.00°F, Humidity: 50.00%, Light: 50%, Moisture: 50%, Water Level: 50
 
-    
     }
 
 
@@ -74,15 +73,15 @@ void loop() {
     delay(1000);  // Run pump for 1 second
     digitalWrite(pump, LOW);
     Serial.println("Pump off");
+    printWaterStatus("LowWaterLevel");
+    printTemperatureANDHumidity(temperatureC, temperatureF, humidity);
+    printLightANDMoisture(lightLevel, waterLevel, moistureLevel);
   } else {
     static unsigned long lastPrintMillis = 0;
     if (currentMillis - lastPrintMillis >= 20000) { // 20 seconds interval
       lastPrintMillis = currentMillis;
       digitalWrite(pump, LOW);
       Serial.println("Soil moisture sufficient, Pump on standby");
-      printWaterStatus("LowWaterLevel");
-      printTemperatureANDHumidity(temperatureC, temperatureF, humidity);
-      printLightANDMoisture(lightLevel, waterLevel, moistureLevel);
     }
   }
 
