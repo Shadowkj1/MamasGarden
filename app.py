@@ -76,11 +76,18 @@ def home():
 
     # Pass the formatted fact to the template
     return render_template('main.html', plant_fact=formatted_fact)
+
 @app.route('/dashboard')
 def dashboard():
     """Displays the latest sensor data"""
-    latest_data = plants_collection.find().sort("timestamp", -1).limit(1)  # Get latest 1 reading
-    return render_template('dashboard.html', plants=latest_data)
+    latest_data = plants_collection.find().sort("timestamp", -1).limit(1)  # Get the latest plant reading
+    
+    # Convert cursor to a list and extract the first document if it exists
+    latest_data_list = list(latest_data)
+    plant = latest_data_list[0] if latest_data_list else None  # Get the first document or None if no data
+    
+    return render_template('dashboard.html', plant=plant)  # Ensure 'plant' is passed correctly
+
 
 # Plant details page
 @app.route('/plant')
