@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <title>Plant Data Visualization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='water.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <h1 style="color: black; font-size: 4rem; text-align: center;">How is my Bonsai?</h1>
+
+    <!-- Dropdown to Select Graph Type -->
+    <label for="graphType">Select Metric:</label>
+    <select id="graphType">
+        <option value="temperatureF">Temperature (°F)</option>
+        <option value="humidity">Humidity (%)</option>
+        <option value="light">Light Level</option>
+        <option value="moisture">Moisture Level</option>
+        <option value="waterLevel">Water Level</option>
+    </select>
+
+    <!-- Single Chart Container -->
+    <div class="chart-container">
+        <h2 id="chartTitle">Temperature (°F)</h2>
+        <canvas id="dataChart"></canvas>
+    </div>
+
+    <script src="{{ url_for('static', filename='plant_graphs.js') }}"></script>
+
+</body>
+</html>

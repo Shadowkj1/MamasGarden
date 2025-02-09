@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Mamas.png') }}">
     <title>Mama's Garden</title>
@@ -16,12 +17,12 @@
 
     <!-- Main Dashboard -->
     <div class="dashboard">
-        <h2>Your Plants</h2>
+        <h2>My Plants</h2>
 
         <div class="plant-scroll-container">
             <div class="plant-scroll">
-                {% for plant in plants %}
-                <div class="plant-card">
+                <!-- Static Plant Cards -->
+                <div class="plant-card" onclick="openPlantPage('aloevera')">
                     <img src="{{ url_for('static', filename='images/aloevera.webp') }}" alt="Aloe Vera">
                     <h3>Aloe Vera</h3>
                     <div class="extra-info">
@@ -33,7 +34,7 @@
                     </div>
                 </div>
         
-                <div class="plant-card">
+                <div class="plant-card" onclick="openPlantPage('snakeplant')">
                     <img src="{{ url_for('static', filename='images/snakeplant.jpeg') }}" alt="Snake Plant">
                     <h3>Snake Plant</h3>
                     <div class="extra-info">
@@ -45,7 +46,7 @@
                     </div>
                 </div>
         
-                <div class="plant-card">
+                <div class="plant-card" onclick="openPlantPage('basil')">
                     <img src="{{ url_for('static', filename='images/basil.jpg') }}" alt="Basil">
                     <h3>Basil</h3>
                     <div class="extra-info">
@@ -57,21 +58,21 @@
                     </div>
                 </div>
 
-                <div class="plant-card">
-                    <img src="{{ url_for('static', filename='images/k7543.jpg') }}">
+                <div class="plant-card" onclick="openPlantPage('bonsai')">
+                    <img src="{{ url_for('static', filename='images/bonsai.jpg') }}" alt="Bonsai">
                     <h3>Bonsai</h3>
-
                     <div class="extra-info">
-                        <p>Humidity: {{ plant.humidity }}%</p>
-                        <p>Water Level: {{ plant.water_level }}%</p>
-                        <p>Moisture: {{ plant.moisture }}%</p>
-                        <p>Sunlight: {{ plant.light }} hrs</p>
-                        <p>Temperature: {{ plant.temp_c }}°C</p>
+                        <p>Humidity: 95%</p>
+                        <p>Water Level: 85%</p>
+                        <p>Moisture: 70%</p>
+                        <p>Sunlight: 7 hrs</p>
+                        <p>Temperature: 24°C</p>
                     </div>
                 </div>
-                {% endfor %}
+        
             </div>
         </div>
+        
     </div>
     
     <script src="{{ url_for('static', filename='script.js') }}"></script>

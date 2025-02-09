@@ -1,0 +1,55 @@
+/* General Page Styling */
+body {
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+    margin: 20px;
+    background: linear-gradient(to bottom, green, grey);
+    color: black;
+}
+
+/* Dropdown Styling */
+label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    width: 85%;
+    max-width: 900px;
+    margin: 20px auto; /* Reduce margin to bring it higher */
+    background: white;
+    padding: 15px 20px; /* Reduce padding */
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    height: 450px; /* Ensure proper height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Move content higher */
+}
+
+canvas {
+    width: 100% !important;
+    height: 350px !important; /* Reduce height slightly */
+    max-height: 350px;
+}
+
+/* Adjust Legend */
+.chart-container .chartjs-legend {
+    text-align: right !important;
+}
+
+/* Title Styling */
+h2 {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
