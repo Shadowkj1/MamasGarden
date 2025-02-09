@@ -93,24 +93,22 @@ def plant():
     plant_id = request.args.get('plant')  # Get plant ID from URL
     return render_template('plant.html', plant_id=plant_id)
 
-# ======================== API: Get Latest Plant Data ======================== #
-@app.route('/get_plants', methods=['GET'])
-def get_plants():
-    """API to return latest plant sensor data from MongoDB"""
-    plants = list(plants_collection.find({}, {"_id": 0}).sort("timestamp", -1).limit(10))
-    return jsonify(plants)
-
-# ======================== API: Get JSON Plant Logs ======================== #
-@app.route('/api/plant-logs')
+# ======================== API: Get Latest Plant Logs from MongoDB ======================== #
+@app.route('/api/plant-logs', methods=['GET'])
 def get_plant_logs():
-    """API to serve JSON data from local file (hardware/PlantLogs/2025-02-08.json)"""
-    log_file = os.path.join("hardware", "PlantLogs", "2025-02-08.json")
+    """API to fetch latest plant logs directly from MongoDB"""
     try:
-        with open(log_file, "r") as file:
-            data = json.load(file)
-        return jsonify(data)
+        # Fetch the latest 10 plant sensor records sorted by timestamp
+        logs = list(plants_collection.find({}, {"_id": 0}).sort("timestamp", -1).limit(10))
+
+        if not logs:
+            return jsonify({"error": "No plant log data found in MongoDB"}), 404
+
+        return jsonify(logs)  # Send as JSON response
     except Exception as e:
+        print(f"❌ Error fetching plant logs from MongoDB: {e}")
         return jsonify({"error": str(e)}), 500
+
 
 # ======================== API: AI Smart Recommendation ======================== #
 @app.route('/get_recommendation', methods=['GET'])
