@@ -64,9 +64,9 @@ void loop() {
 
   }
 
-  // Check soil moisture level and control the pump
-  int moistureLevel = analogRead(moisturePin);
-  moistureLevel = map(moistureLevel, 550, 0, 0, 100); // Convert to percentage
+  // // Check soil moisture level and control the pump
+  // int moistureLevel = analogRead(moisturePin);
+  // moistureLevel = map(moistureLevel, 550, 0, 0, 100); // Convert to percentage
 
   if (moistureLevel < threshold) { // If soil is dry, activate pump
     digitalWrite(pump, HIGH);
