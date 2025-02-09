@@ -27,25 +27,26 @@ unsigned long previousMillis = 0; // Store the last time data was grabbed
 const long interval = 60000; // Interval to grab data (1 minute)
 
 void loop() {
+  // Read humidity and temperature
+  float humidity = dht.readHumidity();           
+  float temperatureC = dht.readTemperature();   // Temperature in Celsius
+  float temperatureF = dht.readTemperature(true); // Temperature in Fahrenheit
+  float temperatureK = temperatureC + 273.15;   // Temperature in Kelvin
+
+  // Read light, soil moisture, and water level sensors
+  int rawLightLevel = analogRead(lightPin);
+  int lightLevel = map(rawLightLevel, 0, 1023, 100, 0); // Convert to percentage (0 = dark, 100 = bright)
+  int waterLevel = analogRead(waterLevelPin);
+  int moistureLevel = analogRead(moisturePin);
+  moistureLevel = map(moistureLevel, 550, 0, 0, 100); // Convert to percentage
+  
   unsigned long currentMillis = millis();
 
   // Check if it's time to grab data
   if (currentMillis - previousMillis >= interval) {
     previousMillis = currentMillis;
 
-    // Read humidity and temperature
-    float humidity = dht.readHumidity();           
-    float temperatureC = dht.readTemperature();   // Temperature in Celsius
-    float temperatureF = dht.readTemperature(true); // Temperature in Fahrenheit
-    float temperatureK = temperatureC + 273.15;   // Temperature in Kelvin
-
-    // Read light, soil moisture, and water level sensors
-    int rawLightLevel = analogRead(lightPin);
-    int lightLevel = map(rawLightLevel, 0, 1023, 100, 0); // Convert to percentage (0 = dark, 100 = bright)
-    int waterLevel = analogRead(waterLevelPin);
-    int moistureLevel = analogRead(moisturePin);
-    moistureLevel = map(moistureLevel, 550, 0, 0, 100); // Convert to percentage
-
+    
     // Check if DHT sensor reading is valid
     if (isnan(humidity) || isnan(temperatureC)) {
       Serial.println("Error reading DHT sensor data! Fix to display data correctly");
