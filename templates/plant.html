@@ -11,6 +11,11 @@
 </head>
 <body>
 
+    <!-- Back to Dashboard Button -->
+    <a href="{{ url_for('dashboard') }}" class="back-button">
+        <img src="{{ url_for('static', filename='images/back-icon.png') }}" alt="Back to Dashboard">
+    </a>
+
     <h1 style="color: black; font-size: 4rem; text-align: center;">How is my Bonsai?</h1>
 
     <!-- Dropdown to Select Graph Type -->
@@ -18,9 +23,9 @@
     <select id="graphType">
         <option value="temperatureF">Temperature (°F)</option>
         <option value="humidity">Humidity (%)</option>
-        <option value="light">Light Level</option>
-        <option value="moisture">Moisture Level</option>
-        <option value="waterLevel">Water Level</option>
+        <option value="light">Light Level (Lux)</option>
+        <option value="moisture">Moisture Level (%)</option>
+        <option value="waterLevel">Water Level (cm)</option>
     </select>
 
     <!-- Graph Section -->
@@ -39,3 +44,4 @@
 
 </body>
 </html>
+
