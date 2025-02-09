@@ -1,0 +1,1012 @@
+[
+    {
+        "timestamp": "2025/02/09 - 00:00:17",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 21,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:00:30",
+        "waterStatus": "LowWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 55,
+        "moisture": 19,
+        "waterLevel": 19
+    },
+    {
+        "timestamp": "2025/02/09 - 00:00:31",
+        "waterStatus": "LowWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 53,
+        "moisture": 14,
+        "waterLevel": 51
+    },
+    {
+        "timestamp": "2025/02/09 - 00:00:37",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 21,
+        "waterLevel": 9
+    },
+    {
+        "timestamp": "2025/02/09 - 00:00:57",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 21,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:01:17",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 21,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:01:37",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 58,
+        "moisture": 21,
+        "waterLevel": 12
+    },
+    {
+        "timestamp": "2025/02/09 - 00:01:55",
+        "waterStatus": "LowWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 58,
+        "moisture": 19,
+        "waterLevel": 20
+    },
+    {
+        "timestamp": "2025/02/09 - 00:01:56",
+        "waterStatus": "LowWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 58,
+        "moisture": 14,
+        "waterLevel": 35
+    },
+    {
+        "timestamp": "2025/02/09 - 00:01:58",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:02:18",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 58,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:02:33",
+        "waterStatus": "LowWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 56,
+        "moisture": 19,
+        "waterLevel": 19
+    },
+    {
+        "timestamp": "2025/02/09 - 00:02:34",
+        "waterStatus": "LowWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 52,
+        "moisture": 12,
+        "waterLevel": 40
+    },
+    {
+        "timestamp": "2025/02/09 - 00:02:38",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 60,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:02:58",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 21,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:03:18",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 21,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:03:38",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:03:58",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 21,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:04:18",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 21,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:04:39",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 21,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:04:44",
+        "waterStatus": "LowWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 58,
+        "moisture": 19,
+        "waterLevel": 19
+    },
+    {
+        "timestamp": "2025/02/09 - 00:04:45",
+        "waterStatus": "LowWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 52,
+        "moisture": 14,
+        "waterLevel": 36
+    },
+    {
+        "timestamp": "2025/02/09 - 00:04:59",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 24.0,
+        "light": 60,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:05:19",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 24.0,
+        "light": 58,
+        "moisture": 21,
+        "waterLevel": 9
+    },
+    {
+        "timestamp": "2025/02/09 - 00:05:39",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 24.0,
+        "light": 60,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:05:59",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:06:19",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 60,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:06:39",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:07:00",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:07:20",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 60,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:07:40",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:08:00",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 60,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:08:20",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 60,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:08:40",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:09:00",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 60,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:09:21",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:09:41",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:10:01",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 60,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:10:21",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.7,
+        "temperatureF": 67.46,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:10:41",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:11:01",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:11:21",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:11:41",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 24.0,
+        "light": 60,
+        "moisture": 22,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:12:02",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:12:22",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 10
+    },
+    {
+        "timestamp": "2025/02/09 - 00:12:42",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:13:02",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 24.0,
+        "light": 59,
+        "moisture": 22,
+        "waterLevel": 11
+    },
+    {
+        "timestamp": "2025/02/09 - 00:38:59",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 24.0,
+        "light": 80,
+        "moisture": 62,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 00:49:03",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.8,
+        "temperatureF": 67.64,
+        "humidity": 25.0,
+        "light": 79,
+        "moisture": 59,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 00:59:07",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 25.0,
+        "light": 80,
+        "moisture": 59,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 01:09:11",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.5,
+        "temperatureF": 67.1,
+        "humidity": 25.0,
+        "light": 80,
+        "moisture": 59,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 01:19:15",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 25.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 01:29:19",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 25.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 01:39:23",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.4,
+        "temperatureF": 66.92,
+        "humidity": 25.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 01:49:27",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.5,
+        "temperatureF": 67.1,
+        "humidity": 25.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 01:59:32",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 02:09:36",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.6,
+        "temperatureF": 67.28,
+        "humidity": 25.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 02:19:40",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.5,
+        "temperatureF": 67.1,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 02:29:44",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.5,
+        "temperatureF": 67.1,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 02:39:48",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.4,
+        "temperatureF": 66.92,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 02:49:52",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.3,
+        "temperatureF": 66.74,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 02:59:56",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.3,
+        "temperatureF": 66.74,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 03:10:00",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.4,
+        "temperatureF": 66.92,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 03:20:04",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.4,
+        "temperatureF": 66.92,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 03:30:08",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.4,
+        "temperatureF": 66.92,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 03:40:12",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.4,
+        "temperatureF": 66.92,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 03:50:16",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.4,
+        "temperatureF": 66.92,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 04:00:20",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.3,
+        "temperatureF": 66.74,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 04:10:24",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.3,
+        "temperatureF": 66.74,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 04:20:28",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 04:30:32",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.4,
+        "temperatureF": 66.92,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 04:40:36",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.4,
+        "temperatureF": 66.92,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 04:50:40",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.3,
+        "temperatureF": 66.74,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 05:00:45",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.3,
+        "temperatureF": 66.74,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 05:10:49",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 05:20:53",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.3,
+        "temperatureF": 66.74,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 05:30:57",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.3,
+        "temperatureF": 66.74,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 05:41:01",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.3,
+        "temperatureF": 66.74,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 05:51:05",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 06:01:09",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 06:11:13",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 06:21:17",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 79,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 06:31:21",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 06:41:25",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 06:51:29",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 07:01:33",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.0,
+        "temperatureF": 66.2,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 07:11:37",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 80,
+        "moisture": 60,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 07:21:41",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 60,
+        "moisture": 24,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 07:21:47",
+        "waterStatus": "LowWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 53,
+        "moisture": 9,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 07:21:48",
+        "waterStatus": "LowWaterLevel",
+        "temperatureC": 19.3,
+        "temperatureF": 66.74,
+        "humidity": 26.0,
+        "light": 55,
+        "moisture": 9,
+        "waterLevel": 8
+    },
+    {
+        "timestamp": "2025/02/09 - 07:31:45",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 74,
+        "moisture": 50,
+        "waterLevel": 5
+    },
+    {
+        "timestamp": "2025/02/09 - 07:41:50",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.0,
+        "temperatureF": 66.2,
+        "humidity": 26.0,
+        "light": 74,
+        "moisture": 49,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 07:51:54",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 74,
+        "moisture": 49,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 08:01:58",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 74,
+        "moisture": 49,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 08:12:02",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 74,
+        "moisture": 48,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 08:22:06",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 73,
+        "moisture": 48,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 08:32:10",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 74,
+        "moisture": 49,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 08:42:14",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.1,
+        "temperatureF": 66.38,
+        "humidity": 26.0,
+        "light": 73,
+        "moisture": 48,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 08:52:18",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 71,
+        "moisture": 46,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 09:02:22",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.3,
+        "temperatureF": 66.74,
+        "humidity": 26.0,
+        "light": 72,
+        "moisture": 46,
+        "waterLevel": 4
+    },
+    {
+        "timestamp": "2025/02/09 - 09:12:26",
+        "waterStatus": "NormalWaterLevel",
+        "temperatureC": 19.2,
+        "temperatureF": 66.56,
+        "humidity": 26.0,
+        "light": 72,
+        "moisture": 46,
+        "waterLevel": 4
+    }
+]
