@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Mama's Garden</title>
 </head>
 <body>
     <!-- Animated Title -->
@@ -18,44 +19,28 @@
         <!-- Infinite Scrolling Plant Strip -->
         <div class="plant-scroll-container">
             <div class="plant-scroll">
+                {% for plant in plants %}
                 <div class="plant-card">
-                    <img src="{{ url_for('static', filename='images/aloe.png') }}" alt="Aloe Vera">
-                    <h3>Aloe Vera</h3>
-                    <p class="health-status good">Health: Good</p>
-                    <div class="extra-info">
-                        <p>Humidity: 90%</p>
-                        <p>Water Level: 90%</p>
-                        <p>Moisture: 75%</p>
-                        <p>Sunlight: 6 hrs</p>
-                        <p>Temperature: 6 hrs</p>
-                    </div>
-                </div>
+                    <img src="{{ url_for('static', filename='images/k7543.jpg') }}">
+                    <h3>Bonsai</h3>
 
-                <div class="plant-card">
-                    <img src="{{ url_for('static', filename='images/snakeplant.png') }}" alt="Snake Plant">
-                    <h3>Snake Plant</h3>
-                    <p class="health-status warning">Health: Needs Water</p>
-                    <div class="extra-info">
-                        <p>Humidity: 90%</p>
-                        <p>Water Level: 90%</p>
-                        <p>Moisture: 75%</p>
-                        <p>Sunlight: 6 hrs</p>
-                        <p>Temperature: 6 hrs</p>
-                    </div>
-                </div>
+                    {% if plant.health == "Good" %}
+                        <p class="health-status good">Health: Thriving</p>
+                    {% elif plant.health == "Needs Water" %}
+                        <p class="health-status warning">Health: Needs Water</p>
+                    {% else %}
+                        <p class="health-status critical">Health: Critical</p>
+                    {% endif %}
 
-                <div class="plant-card">
-                    <img src="{{ url_for('static', filename='images/basil.png') }}" alt="Basil">
-                    <h3>Basil</h3>
-                    <p class="health-status good">Health: Thriving</p>
                     <div class="extra-info">
-                        <p>Humidity: 90%</p>
-                        <p>Water Level: 90%</p>
-                        <p>Moisture: 75%</p>
-                        <p>Sunlight: 6 hrs</p>
-                        <p>Temperature: 6 hrs</p>
+                        <p>Humidity: {{ plant.humidity }}%</p>
+                        <p>Water Level: {{ plant.water_level }}%</p>
+                        <p>Moisture: {{ plant.moisture }}%</p>
+                        <p>Sunlight: {{ plant.light }} hrs</p>
+                        <p>Temperature: {{ plant.temp_c }}°C</p>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -63,3 +48,4 @@
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
+
