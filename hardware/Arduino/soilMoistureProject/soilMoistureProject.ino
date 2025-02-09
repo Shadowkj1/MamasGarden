@@ -115,6 +115,6 @@ void printLightANDMoisture(int lightLevel, int waterLevel, int moistLevel){
     Serial.println(waterLevel); 
 }
 
-void printWaterStatus(string status){
+void printWaterStatus(String status){
   Serial.print(status);
 }
