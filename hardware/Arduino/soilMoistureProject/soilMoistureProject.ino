@@ -68,8 +68,12 @@ void loop() {
     digitalWrite(pump, LOW);
     Serial.println("Pump off");
   } else {
-    digitalWrite(pump, LOW);
-    Serial.println("Soil moisture sufficient, do not turn on pump");
+    static unsigned long lastPrintMillis = 0;
+    if (currentMillis - lastPrintMillis >= 20000) { // 20 seconds interval
+      lastPrintMillis = currentMillis;
+      digitalWrite(pump, LOW);
+      Serial.println("Soil moisture sufficient, Pump on standby");
+    }
   }
 
 }
