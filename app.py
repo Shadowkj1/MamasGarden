@@ -32,7 +32,7 @@ def home():
 @app.route('/dashboard')
 def dashboard():
     """Displays the latest sensor data"""
-    latest_data = plants_collection.find().sort("timestamp", -1).limit(10)  # Get latest 10 readings
+    latest_data = plants_collection.find().sort("timestamp", -1).limit(1)  # Get latest 10 readings
     return render_template('dashboard.html', plants=latest_data)
 
 @app.route('/get_plants', methods=['GET'])

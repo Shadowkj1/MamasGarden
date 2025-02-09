@@ -26,10 +26,10 @@
                     <h3>Aloe Vera</h3>
                     <div class="extra-info">
                         <p>Humidity: 90%</p>
-                        <p>Water Level: 90%</p>
+                        <p>Water Level: 3</p>
                         <p>Moisture: 75%</p>
-                        <p>Sunlight: 6 hrs</p>
-                        <p>Temperature: 25°C</p>
+                        <p>Light: 62 lux</p>
+                        <p>Temperature: 25°C / 77°F</p>
                     </div>
                 </div>
         
@@ -38,10 +38,10 @@
                     <h3>Snake Plant</h3>
                     <div class="extra-info">
                         <p>Humidity: 80%</p>
-                        <p>Water Level: 40%</p>
+                        <p>Water Level: 5</p>
                         <p>Moisture: 50%</p>
-                        <p>Sunlight: 5 hrs</p>
-                        <p>Temperature: 22°C</p>
+                        <p>Light: 58 lux</p>
+                        <p>Temperature: 22°C / 71.6°F</p>
                     </div>
                 </div>
         
@@ -50,10 +50,10 @@
                     <h3>Basil</h3>
                     <div class="extra-info">
                         <p>Humidity: 95%</p>
-                        <p>Water Level: 85%</p>
+                        <p>Water Level: 4</p>
                         <p>Moisture: 70%</p>
-                        <p>Sunlight: 7 hrs</p>
-                        <p>Temperature: 24°C</p>
+                        <p>Light: 78 lux</p>
+                        <p>Temperature: 24°C / 75.2°F</p>
                     </div>
                 </div>
 
@@ -63,17 +63,17 @@
 
                     <div class="extra-info">
                         <p>Humidity: {{ plant.humidity }}%</p>
-                        <p>Water Level: {{ plant.water_level }}%</p>
+                        <p>Water Level: {{ plant.waterLevel }}</p>
                         <p>Moisture: {{ plant.moisture }}%</p>
-                        <p>Sunlight: {{ plant.light }} hrs</p>
-                        <p>Temperature: {{ plant.temp_c }}°C</p>
+                        <p>Light: {{ plant.light }} lux</p>
+                        <p>Temperature: {{ plant.temperatureC }}°C / {{ plant.temperatureF }}°F</p>
                     </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
     </div>
-    
+
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
