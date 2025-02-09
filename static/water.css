@@ -53,3 +53,28 @@ h2 {
     font-weight: bold;
     color: black;
 }
+
+/* General Page Styling */
+body {
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+    margin: 20px;
+    background: linear-gradient(to bottom, green, grey);
+    color: black;
+}
+
+/* AI Recommendation Section */
+.recommendation-container {
+    width: 85%;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.recommendation-container h2 {
+    font-size: 2rem;
+    color: black;
+}

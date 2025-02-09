@@ -22,10 +22,16 @@
         <option value="waterLevel">Water Level</option>
     </select>
 
-    <!-- Single Chart Container -->
+    <!-- Graph Section -->
     <div class="chart-container">
         <h2 id="chartTitle">Temperature (°F)</h2>
         <canvas id="dataChart"></canvas>
+    </div>
+
+    <!-- AI Recommendation Section -->
+    <div class="recommendation-container">
+        <h2>Smart Recommendations</h2>
+        <p id="ai-recommendation">Loading AI recommendation...</p>
     </div>
 
     <script src="{{ url_for('static', filename='plant_graphs.js') }}"></script>
