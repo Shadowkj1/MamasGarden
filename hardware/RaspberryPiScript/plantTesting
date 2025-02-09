@@ -68,12 +68,13 @@ while True:
             if len(values) == 6:
                 data_entry = {
                     "timestamp": time.time(),
-                    "temperatureC": float(values[0]),
-                    "temperatureF": float(values[1]),
-                    "humidity": float(values[2]),
-                    "light": int(values[3]),
-                    "moisture": int(values[4]),
-                    "waterLevel": int(values[5]),
+                    "waterStatus": str(values[0]),
+                    "temperatureC": float(values[1]),
+                    "temperatureF": float(values[2]),
+                    "humidity": float(values[3]),
+                    "light": int(values[4]),
+                    "moisture": int(values[5]),
+                    "waterLevel": int(values[6]),
                 }
 
                 log_data(data_entry)

@@ -50,6 +50,7 @@ void loop() {
     if (isnan(humidity) || isnan(temperatureC)) {
       Serial.println("Error reading DHT sensor data! Fix to display data correctly");
     } else {
+      printWaterStatus("NormalWaterLevel");
       printTemperatureANDHumidity(temperatureC, temperatureF, humidity);
       // Output light, soil moisture, and water level data
       printLightANDMoisture(lightLevel, waterLevel, moistureLevel);
@@ -78,6 +79,9 @@ void loop() {
       lastPrintMillis = currentMillis;
       digitalWrite(pump, LOW);
       Serial.println("Soil moisture sufficient, Pump on standby");
+      printWaterStatus("LowWaterLevel");
+      printTemperatureANDHumidity(temperatureC, temperatureF, humidity);
+      printLightANDMoisture(lightLevel, waterLevel, moistureLevel);
     }
   }
 
@@ -109,4 +113,8 @@ void printLightANDMoisture(int lightLevel, int waterLevel, int moistLevel){
     // Serial.print("%, Water Level: "); 
     Serial.print(",");
     Serial.println(waterLevel); 
+}
+
+void printWaterStatus(string status){
+  Serial.print(status);
 }
