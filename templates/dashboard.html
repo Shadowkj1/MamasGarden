@@ -6,20 +6,25 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+
     <!-- Animated Title -->
     <nav>
         <h1>Mama's Garden</h1>
     </nav>
+    <div class="profile-container">
+        <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Profile Picture" class="profile-pic">
+        <span class="profile-name">Sree D</span>
+    </div>
 
     <!-- Main Dashboard -->
     <div class="dashboard">
         <h2>Your Plants</h2>
 
-        <!-- Infinite Scrolling Plant Strip -->
+        
         <div class="plant-scroll-container">
             <div class="plant-scroll">
                 <div class="plant-card">
-                    <img src="{{ url_for('static', filename='images/aloe.png') }}" alt="Aloe Vera">
+                    <img src="{{ url_for('static', filename='images/aloevera.webp') }}" alt="Aloe Vera">
                     <h3>Aloe Vera</h3>
                     <p class="health-status good">Health: Good</p>
                     <div class="extra-info">
@@ -27,37 +32,38 @@
                         <p>Water Level: 90%</p>
                         <p>Moisture: 75%</p>
                         <p>Sunlight: 6 hrs</p>
-                        <p>Temperature: 6 hrs</p>
+                        <p>Temperature: 25°C</p>
                     </div>
                 </div>
-
+        
                 <div class="plant-card">
-                    <img src="{{ url_for('static', filename='images/snakeplant.png') }}" alt="Snake Plant">
+                    <img src="{{ url_for('static', filename='images/snakeplant.jpeg') }}" alt="Snake Plant">
                     <h3>Snake Plant</h3>
                     <p class="health-status warning">Health: Needs Water</p>
                     <div class="extra-info">
-                        <p>Humidity: 90%</p>
-                        <p>Water Level: 90%</p>
-                        <p>Moisture: 75%</p>
-                        <p>Sunlight: 6 hrs</p>
-                        <p>Temperature: 6 hrs</p>
+                        <p>Humidity: 80%</p>
+                        <p>Water Level: 40%</p>
+                        <p>Moisture: 50%</p>
+                        <p>Sunlight: 5 hrs</p>
+                        <p>Temperature: 22°C</p>
                     </div>
                 </div>
-
+        
                 <div class="plant-card">
-                    <img src="{{ url_for('static', filename='images/basil.png') }}" alt="Basil">
+                    <img src="{{ url_for('static', filename='images/basil.jpg') }}" alt="Basil">
                     <h3>Basil</h3>
                     <p class="health-status good">Health: Thriving</p>
                     <div class="extra-info">
-                        <p>Humidity: 90%</p>
-                        <p>Water Level: 90%</p>
-                        <p>Moisture: 75%</p>
-                        <p>Sunlight: 6 hrs</p>
-                        <p>Temperature: 6 hrs</p>
+                        <p>Humidity: 95%</p>
+                        <p>Water Level: 85%</p>
+                        <p>Moisture: 70%</p>
+                        <p>Sunlight: 7 hrs</p>
+                        <p>Temperature: 24°C</p>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
