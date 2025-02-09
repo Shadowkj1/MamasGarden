@@ -118,4 +118,5 @@ void printLightANDMoisture(int lightLevel, int waterLevel, int moistLevel){
 
 void printWaterStatus(String status){
   Serial.print(status);
+  Serial.print(",");
 }
