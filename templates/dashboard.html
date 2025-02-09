@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Mamas.png') }}">
+    <title>Mama's Garden</title>
 </head>
 <body>
 
@@ -23,6 +25,7 @@
         
         <div class="plant-scroll-container">
             <div class="plant-scroll">
+                {% for plant in plants %}
                 <div class="plant-card">
                     <img src="{{ url_for('static', filename='images/aloevera.webp') }}" alt="Aloe Vera">
                     <h3>Aloe Vera</h3>
@@ -59,8 +62,26 @@
                         <p>Moisture: 70%</p>
                         <p>Sunlight: 7 hrs</p>
                         <p>Temperature: 24°C</p>
+                    <img src="{{ url_for('static', filename='images/k7543.jpg') }}">
+                    <h3>Bonsai</h3>
+
+                    {% if plant.health == "Good" %}
+                        <p class="health-status good">Health: Thriving</p>
+                    {% elif plant.health == "Needs Water" %}
+                        <p class="health-status warning">Health: Needs Water</p>
+                    {% else %}
+                        <p class="health-status critical">Health: Critical</p>
+                    {% endif %}
+
+                    <div class="extra-info">
+                        <p>Humidity: {{ plant.humidity }}%</p>
+                        <p>Water Level: {{ plant.water_level }}%</p>
+                        <p>Moisture: {{ plant.moisture }}%</p>
+                        <p>Sunlight: {{ plant.light }} hrs</p>
+                        <p>Temperature: {{ plant.temp_c }}°C</p>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
         
@@ -69,3 +90,4 @@
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
+
