@@ -7,6 +7,11 @@ body, html {
     overflow: hidden;
 }
 
+@font-face {
+    font-family: 'The Scientist';
+    src: url('/static/fonts/TheScientist.ttf') format('truetype');
+}
+
 /* Make the Spline viewer fill the entire viewport */
 spline-viewer {
     width: 100vw;
@@ -16,14 +21,48 @@ spline-viewer {
     left: 0;
 }
 
-/* Button Container (For Inline Layout) */
+/* Mama's Garden Title */
+.website-title {
+    position: fixed;
+    top: 25%;
+    left: 5%;
+    transform: translateY(-50%);
+    font-size: 9rem;
+    font-weight: bold;
+    color: black;
+    text-shadow: 0 0 10px rgba(169, 237, 203, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    font-family: 'The Scientist', sans-serif;
+    z-index: 20;
+    white-space: nowrap;
+}
+
+/* Plant Facts Section */
+.plant-facts {
+    position: fixed;
+    bottom: 10%;
+    right: 1%;
+    background-color: #c2fbd7;
+    border-radius: 20px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: rgba(44, 187, 99, 0.2) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 2px 4px;
+    z-index: 10;
+}
+
+.plant-facts p {
+    margin: 5px 0;
+    font-size: 18px;
+    font-family: 'CerebriSans-Regular', -apple-system, system-ui, Roboto, sans-serif;
+    color: #004d00;
+}
+
+/* Button Container */
 .button-container {
     position: fixed;
-    top: 20%;
-    left: 5%;
+    bottom: 2%;
+    right: 1%;
     z-index: 10; /* Ensure it's above the Spline viewer */
-    display: grid;
-    gap: 50px; /* Space between buttons */
 }
 
 /* Button styles */

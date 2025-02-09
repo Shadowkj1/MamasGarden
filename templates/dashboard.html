@@ -3,46 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mama's Garden Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Mamas.png') }}">
+    <title>Mama's Garden</title>
 </head>
 <body>
-    <!-- 🌿 Navigation Bar -->
+
+    <a href="{{ url_for('home') }}" class="home-button">
+        <img src="{{ url_for('static', filename='images/home.png') }}" alt="Home">
+    </a>
+
+    <!-- Animated Title -->
     <nav>
         <h1>Mama's Garden</h1>
-        <a href="dashboard.html">Dashboard</a>
     </nav>
 
-    <!-- 📊 Main Dashboard -->
+    <!-- Main Dashboard -->
     <div class="dashboard">
-        <h2>Your Plants</h2>
+        <h2>My Plants</h2>
 
-        <!-- 🌱 Plant Overview Section -->
-        <div id="plantList" class="plant-container">
-            <div class="plant-card">
-                <h3>Aloe Vera</h3>
-                <p>Health: <span class="status good">Good</span></p>
-            </div>
-            <div class="plant-card">
-                <h3>Snake Plant</h3>
-                <p>Health: <span class="status warning">Needs Water</span></p>
-            </div>
-            <div class="plant-card">
-                <h3>Basil</h3>
-                <p>Health: <span class="status good">Thriving</span></p>
+        <div class="plant-scroll-container">
+            <div class="plant-scroll">
+                <!-- Static Plant Cards -->
+                <div class="plant-card" onclick="openPlantPage('aloevera')">
+                    <img src="{{ url_for('static', filename='images/aloevera.webp') }}" alt="Aloe Vera">
+                    <h3>Aloe Vera</h3>
+                    <div class="extra-info">
+                        <p>Humidity: 90%</p>
+                        <p>Water Level: 10cm</p>
+                        <p>Moisture: 75%</p>
+                        <p>Light: 62 lux</p>
+                        <p>Temperature: 25°C / 77°F</p>
+                    </div>
+                </div>
+        
+                <div class="plant-card" onclick="openPlantPage('snakeplant')">
+                    <img src="{{ url_for('static', filename='images/snakeplant.jpeg') }}" alt="Snake Plant">
+                    <h3>Snake Plant</h3>
+                    <div class="extra-info">
+                        <p>Humidity: 80%</p>
+                        <p>Water Level: 5cm</p>
+                        <p>Moisture: 50%</p>
+                        <p>Light: 58 lux</p>
+                        <p>Temperature: 22°C / 71.6°F</p>
+                    </div>
+                </div>
+        
+                <div class="plant-card" onclick="openPlantPage('basil')">
+                    <img src="{{ url_for('static', filename='images/basil.jpg') }}" alt="Basil">
+                    <h3>Basil</h3>
+                    <div class="extra-info">
+                        <p>Humidity: 95%</p>
+                        <p>Water Level: 41cm</p>
+                        <p>Moisture: 70%</p>
+                        <p>Light: 78 lux</p>
+                        <p>Temperature: 24°C / 75.2°F</p>
+                    </div>
+                </div>
+
+                <div class="plant-card" onclick="openPlantPage('bonsai')">
+                    <img src="{{ url_for('static', filename='images/bonsai.jpg') }}" alt="Bonsai">
+                    <h3>Bonsai</h3>
+                    <div class="extra-info">
+                        <p>Humidity: {{ plant.humidity }}%</p>
+                        <p>Water Level: {{ plant.waterLevel }}cm</p>
+                        <p>Moisture: {{ plant.moisture }}%</p>
+                        <p>Light: {{ plant.light }} lux</p>
+                        <p>Temperature: {{ plant.temperatureC }}°C / {{ plant.temperatureF }}°F</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- 📈 Metrics Dashboard -->
-        <h2>Plant Health Metrics</h2>
-        <canvas id="plantChart"></canvas>
-
-        <!-- 🤖 AI Recommendations -->
-        <h2>AI Recommendations</h2>
-        <p id="aiAdvice">Loading...</p>
     </div>
 
-    <script src="{{ url_for('static', filename='server.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

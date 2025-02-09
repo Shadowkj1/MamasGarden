@@ -1,0 +1,22 @@
+{
+    "bonsai": {
+        "name": "bonsai",
+        "overallHealth": "Good",
+        "currentStats": {
+            "timestamp": "2025/02/08 - 23:12:50",
+            "waterStatus": "NormalWaterLevel",
+            "temperatureC": 20.3,
+            "temperatureF": 68.54,
+            "humidity": 22.0,
+            "light": 79,
+            "moisture": 59,
+            "waterLevel": 5
+        },
+        "averages": {
+            "temperatureC": {"hourly": 21, "daily": 20.5, "weekly": 19.8, "monthly": 18.7},
+            "humidity": {"hourly": 24, "daily": 23, "weekly": 22, "monthly": 21},
+            "light": {"hourly": 80, "daily": 78, "weekly": 75, "monthly": 72},
+            "moisture": {"hourly": 60, "daily": 58, "weekly": 55, "monthly": 52}
+        }
+    }
+}

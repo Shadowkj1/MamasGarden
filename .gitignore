@@ -1,2 +1,5 @@
 config.py
 venv
+test_mongo.py
+test_gem.py
+\__pycache__

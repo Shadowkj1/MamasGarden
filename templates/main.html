@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mama's Garden</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Mamas.png') }}">
 </head>
 <body>
+
+    <!-- Mama's Garden Title -->
+    <h1 class="website-title">Mama's <br> Garden</h1>
+
+    <!-- Plant Facts Section -->
+    <div class="plant-facts">
+        <strong>Did you know?</strong>
+        <p>{{ plant_fact | safe }}</p> <!-- Dynamic Plant Fact -->
+    </div>
+
+    <!-- Dashboard Button -->
     <div class="button-container">
         <a href="{{ url_for('dashboard') }}"><button class="button-33" role="button">Dashboard</button></a>
-        <button class="button-33" role="button">About</button>
     </div>
 
     <!-- Embed Spline 3D Scene as Background -->
@@ -18,3 +29,4 @@
 
 </body>
 </html>
+
