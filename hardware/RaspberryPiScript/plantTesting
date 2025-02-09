@@ -65,7 +65,7 @@ while True:
         if line and "ERROR" not in line and "Soil moisture sufficient, Pump on standby" not in line:  # Ignore error messages and specific line
             values = line.split(",")
 
-            if len(values) == 6:
+            if len(values) == 7:
                 data_entry = {
                     "timestamp": time.time(),
                     "waterStatus": str(values[0]),
